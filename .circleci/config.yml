@@ -5,7 +5,7 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  print_hello:
+  print-hello:
     docker:
       - image: circleci/node:13.8.0
 
@@ -15,7 +15,7 @@ jobs:
           name: "Print hello"
           command: "echo Hello!"
 
-  print_world:
+  print-world:
     docker:
       - image: circleci/node:13.8.0
 
@@ -30,6 +30,6 @@ jobs:
 workflows:
   print-hello-world-workflow:
     jobs:
-      - print_hello:
+      - print-hello:
           requires:
-            - print_world
+            - print-world
