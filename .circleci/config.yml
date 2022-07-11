@@ -33,7 +33,8 @@ jobs:
       - checkout
       - run:
           name: "Print Name"
-          command: | echo $USER_NAME
+          command: | 
+            echo $USER_NAME
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
